@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro site em flask</title>
+</head>
+<body>
+
+    {%extends "layout.htm"%}
+    {%block content%}
+    {%for post in postagens%}
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <h1>{{post.titulo}}</h1>
+          </div>
+          <div class="col-sm">
+            <h3>{{post.autor}}</h3>
+          </div>
+        </div>
+      </div>
+    <br>
+    {%endfor%}
+    {%endblock%}
+
+</body>
+</html>
